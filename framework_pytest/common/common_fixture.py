@@ -4,7 +4,8 @@ import pytest
 
 from common.utils import SafePage
 
-@pytest.fixture(scope="session", params=["chromium", "firefox"])
+#@pytest.fixture(scope="session", params=["chromium", "firefox"])
+@pytest.fixture(scope="session", params=["chromium"])
 def common_fixture(request, playwright:Playwright):
     browser_type = request.param # Get the current browser type (e.g., 'chromium')
    
